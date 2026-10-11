@@ -55,3 +55,11 @@ def test_tokens_to_css_does_not_double_prefix_extracted_keys() -> None:
     css = tokens_to_css(extract_tokens(figma_data))
     assert "--color-1: #ff0000;" in css
     assert "--colors---color-1" not in css
+
+
+def test_spacing_tokens_carry_a_px_unit():
+    """Figma gutterSize is in pixels; a bare number is not a valid CSS length."""
+    figma = {"document": {"layoutGrids": [{"gutterSize": 24}, {"gutterSize": 12.5}]}}
+    tokens = extract_tokens(figma)
+    assert tokens["spacing"] == {"--spacing-1": "24px", "--spacing-2": "12.5px"}
+    assert "--spacing-1: 24px;" in tokens_to_css(tokens)

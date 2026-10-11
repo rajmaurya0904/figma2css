@@ -49,11 +49,12 @@ def extract_tokens(figma_data: dict) -> dict:
                 # Avoid duplicate spacing values
                 if gutter_size not in seen_spacing:
                     seen_spacing.add(gutter_size)
-                    # Format as integer if whole number, else keep as float
+                    # Figma reports gutterSize in pixels, so the token needs a
+                    # unit -- a bare number is not a valid CSS length.
                     if isinstance(gutter_size, float) and gutter_size.is_integer():
-                        token_value = str(int(gutter_size))
+                        token_value = f'{int(gutter_size)}px'
                     else:
-                        token_value = str(gutter_size)
+                        token_value = f'{gutter_size}px'
                     token_name = f'--spacing-{spacing_index}'
                     spacing[token_name] = token_value
                     spacing_index += 1
