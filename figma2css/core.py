@@ -7,11 +7,15 @@ def extract_tokens(figma_data: dict) -> dict:
         figma_data: The raw Figma file data as a dictionary.
 
     Returns:
-        A dictionary of extracted tokens with a 'colors' key mapping token names to hex colors.
+        A dictionary of extracted tokens with 'colors' and optionally 'spacing' keys.
     """
     colors = {}
     seen_colors = set()
-    index = 1
+    color_index = 1
+
+    spacing = {}
+    seen_spacing = set()
+    spacing_index = 1
 
     def _convert_rgb_to_hex(color_dict: dict) -> str:
         r = color_dict.get('r', 0)
@@ -24,7 +28,7 @@ def extract_tokens(figma_data: dict) -> dict:
         return f'#{int(round(r * 255)):02x}{int(round(g * 255)):02x}{int(round(b * 255)):02x}'
 
     def _process_node(node: dict):
-        nonlocal index
+        nonlocal color_index, spacing_index
         # Process fills on this node
         fills = node.get('fills', [])
         for fill in fills:
@@ -34,9 +38,25 @@ def extract_tokens(figma_data: dict) -> dict:
                     hex_color = _convert_rgb_to_hex(color)
                     if hex_color not in seen_colors:
                         seen_colors.add(hex_color)
-                        token_name = f'--color-{index}'
+                        token_name = f'--color-{color_index}'
                         colors[token_name] = hex_color
-                        index += 1
+                        color_index += 1
+        # Process layout grids on this node
+        grids = node.get('layoutGrids', [])
+        for grid in grids:
+            gutter_size = grid.get('gutterSize')
+            if gutter_size is not None and gutter_size != 0:
+                # Avoid duplicate spacing values
+                if gutter_size not in seen_spacing:
+                    seen_spacing.add(gutter_size)
+                    # Format as integer if whole number, else keep as float
+                    if isinstance(gutter_size, float) and gutter_size.is_integer():
+                        token_value = str(int(gutter_size))
+                    else:
+                        token_value = str(gutter_size)
+                    token_name = f'--spacing-{spacing_index}'
+                    spacing[token_name] = token_value
+                    spacing_index += 1
         # Recurse into children
         children = node.get('children', [])
         for child in children:
@@ -46,4 +66,9 @@ def extract_tokens(figma_data: dict) -> dict:
     if document:
         _process_node(document)
 
-    return {'colors': colors} if colors else {}
+    result = {}
+    if colors:
+        result['colors'] = colors
+    if spacing:
+        result['spacing'] = spacing
+    return result
