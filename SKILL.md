@@ -5,5 +5,9 @@ description: Claude Code skill that extracts design tokens from a Figma file and
 
 # Figma2CSS
 
-TODO: fill in the skill's instructions. See TASKS.md for the planned build
-steps -- this skeleton is filled in one task at a time by the build loop.
+Stub. This skill has no instructions yet.
+
+Only `figma2css.core.extract_tokens()` and `figma2css.core.tokens_to_css()` are
+implemented, and they work on a Figma REST API file dump you supply yourself. There
+is no API client and the `figma2css` command is a stub. See README.md for what does
+and does not work.
