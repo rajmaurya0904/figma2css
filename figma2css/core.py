@@ -79,6 +79,9 @@ def tokens_to_css(tokens: dict) -> str:
 
     Args:
         tokens: A dictionary of tokens, e.g., {'colors': {'primary': '#fff'}}.
+            A key that already looks like a custom property (starts with ``--``),
+            as produced by :func:`extract_tokens`, is used verbatim rather than
+            being prefixed again.
 
     Returns:
         A string containing :root { --key: value; ... }.
@@ -86,8 +89,11 @@ def tokens_to_css(tokens: dict) -> str:
     lines = []
     for category, subdict in tokens.items():
         for key, value in subdict.items():
-            # Convert nested keys to hyphenated custom property name
-            css_property = f"--{category}-{key}"
+            # Keys from extract_tokens are already full custom-property names.
+            if key.startswith("--"):
+                css_property = key
+            else:
+                css_property = f"--{category}-{key}"
             lines.append(f"{css_property}: {value};")
     if lines:
         return f":root {{ {' '.join(lines)} }}"

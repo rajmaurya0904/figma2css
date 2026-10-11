@@ -44,3 +44,14 @@ def test_tokens_to_css() -> None:
     # Ensure the output is a string
     assert isinstance(css, str)
     assert isinstance(css2, str)
+
+def test_tokens_to_css_does_not_double_prefix_extracted_keys() -> None:
+    """Keys from extract_tokens already start with --, so they must not be prefixed."""
+    figma_data = {
+        "document": {
+            "fills": [{"type": "SOLID", "color": {"r": 1, "g": 0, "b": 0}}],
+        }
+    }
+    css = tokens_to_css(extract_tokens(figma_data))
+    assert "--color-1: #ff0000;" in css
+    assert "--colors---color-1" not in css
