@@ -43,15 +43,14 @@ $ python run.py
     "--color-3": "#121724"
   },
   "spacing": {
-    "--spacing-1": "24"
+    "--spacing-1": "24px"
   }
 }
 
-:root { --color-1: #216bed; --color-2: #ffffff; --color-3: #121724; --spacing-1: 24; }
+:root { --color-1: #216bed; --color-2: #ffffff; --color-3: #121724; --spacing-1: 24px; }
 ```
 
-Note that the repeated white fill collapsed into a single token, and that
-`--spacing-1` has no unit — see Limitations.
+Note that the repeated white fill collapsed into a single token.
 
 `run.py`:
 
@@ -109,8 +108,8 @@ parsed dict to `extract_tokens`.
 - The CLI is a stub: no arguments, no file input, no `--help` handling, no output.
 - Token names are positional (`--color-1`), not semantic. Figma layer, style and
   variable names are never read, so the output needs renaming by hand.
-- `--spacing-*` values carry no unit, so `--spacing-1: 24` is not valid CSS as it
-  stands.
+- `--spacing-*` values assume Figma's pixel units and are emitted as `px`. A design
+  that means `rem` or `%` needs converting by hand.
 - Only solid fills are read. Gradients, images, strokes and effects are skipped, and
   `fill.opacity` and node opacity are ignored — so a 50%-opaque colour is recorded as
   if it were opaque.
