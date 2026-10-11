@@ -72,3 +72,23 @@ def extract_tokens(figma_data: dict) -> dict:
     if spacing:
         result['spacing'] = spacing
     return result
+
+
+def tokens_to_css(tokens: dict) -> str:
+    """Format tokens as CSS custom properties in :root.
+
+    Args:
+        tokens: A dictionary of tokens, e.g., {'colors': {'primary': '#fff'}}.
+
+    Returns:
+        A string containing :root { --key: value; ... }.
+    """
+    lines = []
+    for category, subdict in tokens.items():
+        for key, value in subdict.items():
+            # Convert nested keys to hyphenated custom property name
+            css_property = f"--{category}-{key}"
+            lines.append(f"{css_property}: {value};")
+    if lines:
+        return f":root {{ {' '.join(lines)} }}"
+    return ":root {}"
