@@ -1,0 +1,63 @@
+:root {
+  /* colors */
+  --color-bg-page: #ffffff;
+  --color-text-default: #111724;
+  --color-accent: var(--color-blue-600);
+  --color-blue-600: #216bed;
+  --color-blue-400: #699ef7;
+  --color-brand-primary: #216bed;
+  --color-brand-surface: #ffffff;
+  --color-neutral-text: #111724;
+  --gradient-hero: linear-gradient(90deg, #216bed 0%, #7c3aed 100%);
+  --color-overlay-scrim: rgba(0, 0, 0, 0.5);
+  --color-ff5a1f: #ff5a1f;
+
+  /* typography */
+  --font-family-sans: "Inter";
+  --font-size-lg: 20px;
+  --font-label-caps-family: "Inter";
+  --font-label-caps-size: 12px;
+  --font-label-caps-weight: 600;
+  --font-label-caps-line-height: 16px;
+  --font-label-caps-letter-spacing: 0.6px;
+  --font-label-caps-text-transform: uppercase;
+  --font-heading-h1-family: "Inter";
+  --font-heading-h1-size: 32px;
+  --font-heading-h1-weight: 700;
+  --font-heading-h1-line-height: 1.25;
+  --font-heading-h1-letter-spacing: -0.64px;
+  --font-body-regular-family: "Inter";
+  --font-body-regular-size: 16px;
+  --font-body-regular-weight: 400;
+  --font-body-regular-line-height: 1.5;
+  --font-family-roboto-mono: "Roboto Mono";
+  --font-size-13: 13px;
+
+  /* spacing */
+  --spacing-4: 16px;
+  --grid-desktop-12-col-gutter: 24px;
+  --grid-desktop-12-col-margin: 80px;
+  --grid-desktop-12-col-columns: 12;
+  --spacing-8: 8px;
+  --spacing-12: 12px;
+  --spacing-24: 24px;
+
+  /* radii */
+  --radius-md: 8px;
+  --radius-4: 4px;
+  --radius-12: 12px;
+
+  /* effects */
+  --shadow-elevation-card: 0 1px 2px 0 rgba(0, 0, 0, 0.08), 0 8px 24px -4px rgba(17, 23, 36, 0.16);
+  --backdrop-blur-glass-blur: blur(10px);
+
+  /* other */
+  --number-z-index-modal: 1000;
+}
+
+[data-theme="dark"] {
+  /* colors */
+  --color-bg-page: #0f131d;
+  --color-text-default: #f5f6f8;
+  --color-accent: var(--color-blue-400);
+}
