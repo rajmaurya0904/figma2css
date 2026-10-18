@@ -1,0 +1,187 @@
+{
+  "status": 200,
+  "error": false,
+  "meta": {
+    "variableCollections": {
+      "VariableCollectionId:10:1": {
+        "id": "VariableCollectionId:10:1",
+        "name": "Colors",
+        "key": "ck1",
+        "modes": [
+          {"modeId": "10:0", "name": "Light"},
+          {"modeId": "10:1", "name": "Dark"}
+        ],
+        "defaultModeId": "10:0",
+        "remote": false,
+        "hiddenFromPublishing": false,
+        "variableIds": [
+          "VariableID:10:2",
+          "VariableID:10:3",
+          "VariableID:10:4",
+          "VariableID:10:5"
+        ]
+      },
+      "VariableCollectionId:20:1": {
+        "id": "VariableCollectionId:20:1",
+        "name": "Primitives",
+        "key": "ck2",
+        "modes": [{"modeId": "20:0", "name": "Value"}],
+        "defaultModeId": "20:0",
+        "remote": false,
+        "hiddenFromPublishing": false,
+        "variableIds": [
+          "VariableID:20:2",
+          "VariableID:20:3",
+          "VariableID:20:4",
+          "VariableID:20:5",
+          "VariableID:20:6",
+          "VariableID:20:7",
+          "VariableID:20:8"
+        ]
+      }
+    },
+    "variables": {
+      "VariableID:10:2": {
+        "id": "VariableID:10:2",
+        "name": "color/bg/page",
+        "key": "v1",
+        "variableCollectionId": "VariableCollectionId:10:1",
+        "resolvedType": "COLOR",
+        "description": "",
+        "hiddenFromPublishing": false,
+        "scopes": ["ALL_SCOPES"],
+        "codeSyntax": {},
+        "valuesByMode": {
+          "10:0": {"r": 1, "g": 1, "b": 1, "a": 1},
+          "10:1": {"r": 0.0588, "g": 0.0745, "b": 0.1137, "a": 1}
+        }
+      },
+      "VariableID:10:3": {
+        "id": "VariableID:10:3",
+        "name": "color/text/default",
+        "key": "v2",
+        "variableCollectionId": "VariableCollectionId:10:1",
+        "resolvedType": "COLOR",
+        "description": "",
+        "hiddenFromPublishing": false,
+        "scopes": ["ALL_SCOPES"],
+        "codeSyntax": {},
+        "valuesByMode": {
+          "10:0": {"r": 0.0667, "g": 0.0902, "b": 0.1412, "a": 1},
+          "10:1": {"r": 0.9608, "g": 0.9647, "b": 0.9725, "a": 1}
+        }
+      },
+      "VariableID:10:4": {
+        "id": "VariableID:10:4",
+        "name": "color/accent",
+        "key": "v3",
+        "variableCollectionId": "VariableCollectionId:10:1",
+        "resolvedType": "COLOR",
+        "description": "Alias into the primitives collection",
+        "hiddenFromPublishing": false,
+        "scopes": ["ALL_FILLS"],
+        "codeSyntax": {},
+        "valuesByMode": {
+          "10:0": {"type": "VARIABLE_ALIAS", "id": "VariableID:20:2"},
+          "10:1": {"type": "VARIABLE_ALIAS", "id": "VariableID:20:3"}
+        }
+      },
+      "VariableID:10:5": {
+        "id": "VariableID:10:5",
+        "name": "Is Dark Surface",
+        "key": "v4",
+        "variableCollectionId": "VariableCollectionId:10:1",
+        "resolvedType": "BOOLEAN",
+        "description": "",
+        "hiddenFromPublishing": true,
+        "scopes": ["ALL_SCOPES"],
+        "codeSyntax": {},
+        "valuesByMode": {"10:0": false, "10:1": true}
+      },
+      "VariableID:20:2": {
+        "id": "VariableID:20:2",
+        "name": "blue/600",
+        "key": "p1",
+        "variableCollectionId": "VariableCollectionId:20:1",
+        "resolvedType": "COLOR",
+        "description": "",
+        "hiddenFromPublishing": false,
+        "scopes": ["ALL_SCOPES"],
+        "codeSyntax": {},
+        "valuesByMode": {"20:0": {"r": 0.1294, "g": 0.4196, "b": 0.9294, "a": 1}}
+      },
+      "VariableID:20:3": {
+        "id": "VariableID:20:3",
+        "name": "blue/400",
+        "key": "p2",
+        "variableCollectionId": "VariableCollectionId:20:1",
+        "resolvedType": "COLOR",
+        "description": "",
+        "hiddenFromPublishing": false,
+        "scopes": ["ALL_SCOPES"],
+        "codeSyntax": {},
+        "valuesByMode": {"20:0": {"r": 0.4118, "g": 0.6196, "b": 0.9686, "a": 1}}
+      },
+      "VariableID:20:4": {
+        "id": "VariableID:20:4",
+        "name": "space/4",
+        "key": "p3",
+        "variableCollectionId": "VariableCollectionId:20:1",
+        "resolvedType": "FLOAT",
+        "description": "",
+        "hiddenFromPublishing": false,
+        "scopes": ["GAP"],
+        "codeSyntax": {},
+        "valuesByMode": {"20:0": 16}
+      },
+      "VariableID:20:5": {
+        "id": "VariableID:20:5",
+        "name": "radius/md",
+        "key": "p4",
+        "variableCollectionId": "VariableCollectionId:20:1",
+        "resolvedType": "FLOAT",
+        "description": "",
+        "hiddenFromPublishing": false,
+        "scopes": ["CORNER_RADIUS"],
+        "codeSyntax": {},
+        "valuesByMode": {"20:0": 8}
+      },
+      "VariableID:20:6": {
+        "id": "VariableID:20:6",
+        "name": "font/family/sans",
+        "key": "p5",
+        "variableCollectionId": "VariableCollectionId:20:1",
+        "resolvedType": "STRING",
+        "description": "",
+        "hiddenFromPublishing": false,
+        "scopes": ["FONT_FAMILY"],
+        "codeSyntax": {},
+        "valuesByMode": {"20:0": "Inter"}
+      },
+      "VariableID:20:7": {
+        "id": "VariableID:20:7",
+        "name": "font/size/lg",
+        "key": "p6",
+        "variableCollectionId": "VariableCollectionId:20:1",
+        "resolvedType": "FLOAT",
+        "description": "",
+        "hiddenFromPublishing": false,
+        "scopes": ["FONT_SIZE"],
+        "codeSyntax": {},
+        "valuesByMode": {"20:0": 20}
+      },
+      "VariableID:20:8": {
+        "id": "VariableID:20:8",
+        "name": "z-index/modal",
+        "key": "p7",
+        "variableCollectionId": "VariableCollectionId:20:1",
+        "resolvedType": "FLOAT",
+        "description": "",
+        "hiddenFromPublishing": false,
+        "scopes": ["ALL_SCOPES"],
+        "codeSyntax": {},
+        "valuesByMode": {"20:0": 1000}
+      }
+    }
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "name": "Acme Design System",
+  "role": "owner",
+  "lastModified": "2026-09-30T10:14:52Z",
+  "editorType": "figma",
+  "thumbnailUrl": "https://s3-alpha.figma.com/thumbnails/acme.png",
+  "version": "2183746501",
+  "nodes": {
+    "2:3": {
+      "document": {
+        "id": "2:3",
+        "name": "Card",
+        "type": "FRAME",
+        "layoutMode": "VERTICAL",
+        "paddingLeft": 24,
+        "paddingRight": 24,
+        "paddingTop": 24,
+        "paddingBottom": 24,
+        "itemSpacing": 16,
+        "cornerRadius": 12,
+        "fills": [
+          {"blendMode": "NORMAL", "type": "SOLID", "color": {"r": 1, "g": 1, "b": 1, "a": 1}}
+        ],
+        "styles": {"fill": "1:11"},
+        "children": [
+          {
+            "id": "2:4",
+            "name": "Title",
+            "type": "TEXT",
+            "characters": "Welcome back",
+            "fills": [
+              {"blendMode": "NORMAL", "type": "SOLID", "color": {"r": 0.0667, "g": 0.0902, "b": 0.1412, "a": 1}}
+            ],
+            "style": {
+              "fontFamily": "Inter",
+              "fontWeight": 700,
+              "fontSize": 32,
+              "letterSpacing": -0.64,
+              "lineHeightPx": 40,
+              "lineHeightUnit": "PIXELS"
+            },
+            "styles": {"text": "1:20", "fill": "1:12"}
+          }
+        ]
+      },
+      "components": {},
+      "componentSets": {},
+      "schemaVersion": 0,
+      "styles": {
+        "1:11": {"key": "k11", "name": "Brand/Surface", "styleType": "FILL", "description": ""},
+        "1:12": {"key": "k12", "name": "Neutral/Text", "styleType": "FILL", "description": ""},
+        "1:20": {"key": "k20", "name": "Heading/H1", "styleType": "TEXT", "description": ""}
+      }
+    }
+  }
+}

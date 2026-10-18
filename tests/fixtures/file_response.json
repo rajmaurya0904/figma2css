@@ -1,0 +1,264 @@
+{
+  "name": "Acme Design System",
+  "role": "owner",
+  "lastModified": "2026-09-30T10:14:52Z",
+  "editorType": "figma",
+  "thumbnailUrl": "https://s3-alpha.figma.com/thumbnails/acme.png",
+  "version": "2183746501",
+  "schemaVersion": 0,
+  "document": {
+    "id": "0:0",
+    "name": "Document",
+    "type": "DOCUMENT",
+    "scrollPosition": {"x": 0, "y": 0},
+    "children": [
+      {
+        "id": "0:1",
+        "name": "Components",
+        "type": "CANVAS",
+        "scrollPosition": {"x": 0, "y": 0},
+        "backgroundColor": {"r": 0.9647, "g": 0.9647, "b": 0.9647, "a": 1},
+        "prototypeStartNodeID": null,
+        "children": [
+          {
+            "id": "2:1",
+            "name": "Button",
+            "type": "FRAME",
+            "scrollBehavior": "SCROLLS",
+            "blendMode": "PASS_THROUGH",
+            "clipsContent": true,
+            "absoluteBoundingBox": {"x": 0, "y": 0, "width": 120, "height": 40},
+            "layoutMode": "HORIZONTAL",
+            "primaryAxisAlignItems": "CENTER",
+            "counterAxisAlignItems": "CENTER",
+            "paddingLeft": 16,
+            "paddingRight": 16,
+            "paddingTop": 12,
+            "paddingBottom": 12,
+            "itemSpacing": 8,
+            "cornerRadius": 8,
+            "fills": [
+              {"blendMode": "NORMAL", "type": "SOLID", "color": {"r": 0.1294, "g": 0.4196, "b": 0.9294, "a": 1}}
+            ],
+            "styles": {"fill": "1:10"},
+            "strokes": [],
+            "effects": [],
+            "children": [
+              {
+                "id": "2:2",
+                "name": "Label",
+                "type": "TEXT",
+                "blendMode": "PASS_THROUGH",
+                "characters": "Get started",
+                "fills": [
+                  {"blendMode": "NORMAL", "type": "SOLID", "color": {"r": 1, "g": 1, "b": 1, "a": 1}}
+                ],
+                "style": {
+                  "fontFamily": "Inter",
+                  "fontPostScriptName": "Inter-SemiBold",
+                  "fontWeight": 600,
+                  "fontSize": 12,
+                  "textCase": "UPPER",
+                  "textAlignHorizontal": "CENTER",
+                  "letterSpacing": 0.6,
+                  "lineHeightPx": 16,
+                  "lineHeightPercent": 100,
+                  "lineHeightUnit": "PIXELS"
+                },
+                "styles": {"text": "1:22"}
+              }
+            ]
+          },
+          {
+            "id": "2:3",
+            "name": "Card",
+            "type": "FRAME",
+            "blendMode": "PASS_THROUGH",
+            "absoluteBoundingBox": {"x": 200, "y": 0, "width": 320, "height": 200},
+            "layoutMode": "VERTICAL",
+            "paddingLeft": 24,
+            "paddingRight": 24,
+            "paddingTop": 24,
+            "paddingBottom": 24,
+            "itemSpacing": 16,
+            "cornerRadius": 12,
+            "fills": [
+              {"blendMode": "NORMAL", "type": "SOLID", "color": {"r": 1, "g": 1, "b": 1, "a": 1}}
+            ],
+            "effects": [
+              {
+                "type": "DROP_SHADOW",
+                "visible": true,
+                "color": {"r": 0, "g": 0, "b": 0, "a": 0.08},
+                "blendMode": "NORMAL",
+                "offset": {"x": 0, "y": 1},
+                "radius": 2,
+                "showShadowBehindNode": false
+              },
+              {
+                "type": "DROP_SHADOW",
+                "visible": true,
+                "color": {"r": 0.0667, "g": 0.0902, "b": 0.1412, "a": 0.16},
+                "blendMode": "NORMAL",
+                "offset": {"x": 0, "y": 8},
+                "radius": 24,
+                "spread": -4,
+                "showShadowBehindNode": false
+              }
+            ],
+            "styles": {"fill": "1:11", "effect": "1:30"},
+            "children": [
+              {
+                "id": "2:4",
+                "name": "Title",
+                "type": "TEXT",
+                "characters": "Welcome back",
+                "fills": [
+                  {"blendMode": "NORMAL", "type": "SOLID", "color": {"r": 0.0667, "g": 0.0902, "b": 0.1412, "a": 1}}
+                ],
+                "style": {
+                  "fontFamily": "Inter",
+                  "fontPostScriptName": "Inter-Bold",
+                  "fontWeight": 700,
+                  "fontSize": 32,
+                  "letterSpacing": -0.64,
+                  "lineHeightPx": 40,
+                  "lineHeightPercent": 100,
+                  "lineHeightPercentFontSize": 125,
+                  "lineHeightUnit": "FONT_SIZE_%"
+                },
+                "styles": {"text": "1:20", "fill": "1:12"}
+              },
+              {
+                "id": "2:5",
+                "name": "Body",
+                "type": "TEXT",
+                "characters": "Pick up where you left off.",
+                "fills": [
+                  {"blendMode": "NORMAL", "type": "SOLID", "color": {"r": 0.0667, "g": 0.0902, "b": 0.1412, "a": 1}}
+                ],
+                "style": {
+                  "fontFamily": "Inter",
+                  "fontPostScriptName": "Inter-Regular",
+                  "fontWeight": 400,
+                  "fontSize": 16,
+                  "letterSpacing": 0,
+                  "lineHeightPx": 24,
+                  "lineHeightPercentFontSize": 150,
+                  "lineHeightUnit": "FONT_SIZE_%"
+                },
+                "styles": {"text": "1:21", "fill": "1:12"}
+              },
+              {
+                "id": "2:6",
+                "name": "Accent dot",
+                "type": "RECTANGLE",
+                "cornerRadius": 4,
+                "fills": [
+                  {"blendMode": "NORMAL", "type": "SOLID", "color": {"r": 1, "g": 0.3529, "b": 0.1216, "a": 1}}
+                ]
+              },
+              {
+                "id": "2:7",
+                "name": "Code sample",
+                "type": "TEXT",
+                "characters": "npm i figma2css",
+                "fills": [
+                  {"blendMode": "NORMAL", "type": "SOLID", "color": {"r": 0.0667, "g": 0.0902, "b": 0.1412, "a": 1}}
+                ],
+                "style": {
+                  "fontFamily": "Roboto Mono",
+                  "fontWeight": 400,
+                  "fontSize": 13,
+                  "letterSpacing": 0,
+                  "lineHeightPx": 18.5,
+                  "lineHeightUnit": "INTRINSIC_%"
+                }
+              },
+              {
+                "id": "2:8",
+                "name": "Draft badge",
+                "type": "RECTANGLE",
+                "visible": false,
+                "fills": [
+                  {"blendMode": "NORMAL", "type": "SOLID", "color": {"r": 0.0706, "g": 0.2039, "b": 0.3373, "a": 1}}
+                ]
+              }
+            ]
+          },
+          {
+            "id": "2:9",
+            "name": "Hero",
+            "type": "FRAME",
+            "absoluteBoundingBox": {"x": 0, "y": 300, "width": 1440, "height": 480},
+            "size": {"x": 1440, "y": 480},
+            "rectangleCornerRadii": [4, 4, 0, 0],
+            "fills": [
+              {
+                "blendMode": "NORMAL",
+                "type": "GRADIENT_LINEAR",
+                "gradientHandlePositions": [
+                  {"x": 0, "y": 0.5},
+                  {"x": 1, "y": 0.5},
+                  {"x": 0, "y": 1}
+                ],
+                "gradientStops": [
+                  {"color": {"r": 0.1294, "g": 0.4196, "b": 0.9294, "a": 1}, "position": 0},
+                  {"color": {"r": 0.4863, "g": 0.2275, "b": 0.9294, "a": 1}, "position": 1}
+                ]
+              }
+            ],
+            "effects": [
+              {"type": "BACKGROUND_BLUR", "visible": true, "radius": 20}
+            ],
+            "layoutGrids": [
+              {
+                "pattern": "COLUMNS",
+                "sectionSize": 64,
+                "visible": true,
+                "color": {"r": 1, "g": 0, "b": 0, "a": 0.1},
+                "alignment": "STRETCH",
+                "gutterSize": 24,
+                "offset": 80,
+                "count": 12
+              }
+            ],
+            "styles": {"fill": "1:14", "effect": "1:31", "grid": "1:40"},
+            "children": []
+          },
+          {
+            "id": "2:10",
+            "name": "Scrim",
+            "type": "FRAME",
+            "fills": [
+              {"blendMode": "NORMAL", "type": "SOLID", "color": {"r": 0, "g": 0, "b": 0, "a": 1}, "opacity": 0.5}
+            ],
+            "styles": {"fill": "1:13"},
+            "layoutGrids": [
+              {"pattern": "ROWS", "sectionSize": 8, "visible": true, "gutterSize": 0, "alignment": "MIN", "count": 1, "offset": 0},
+              {"pattern": "COLUMNS", "sectionSize": 100, "visible": true, "alignment": "STRETCH", "gutterSize": 16, "offset": 0, "count": 4}
+            ],
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "components": {
+    "2:1": {"key": "c0ffee", "name": "Button", "description": "Primary action", "remote": false}
+  },
+  "componentSets": {},
+  "styles": {
+    "1:10": {"key": "k10", "name": "Brand/Primary", "styleType": "FILL", "description": ""},
+    "1:11": {"key": "k11", "name": "Brand/Surface", "styleType": "FILL", "description": ""},
+    "1:12": {"key": "k12", "name": "Neutral/Text", "styleType": "FILL", "description": ""},
+    "1:13": {"key": "k13", "name": "Overlay/Scrim", "styleType": "FILL", "description": ""},
+    "1:14": {"key": "k14", "name": "Gradient/Hero", "styleType": "FILL", "description": ""},
+    "1:20": {"key": "k20", "name": "Heading/H1", "styleType": "TEXT", "description": ""},
+    "1:21": {"key": "k21", "name": "Body/Regular", "styleType": "TEXT", "description": ""},
+    "1:22": {"key": "k22", "name": "Label/Caps", "styleType": "TEXT", "description": ""},
+    "1:30": {"key": "k30", "name": "Elevation/Card", "styleType": "EFFECT", "description": ""},
+    "1:31": {"key": "k31", "name": "Glass/Blur", "styleType": "EFFECT", "description": ""},
+    "1:40": {"key": "k40", "name": "Desktop/12 col", "styleType": "GRID", "description": ""}
+  }
+}
