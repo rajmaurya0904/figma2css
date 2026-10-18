@@ -1,11 +1,15 @@
 # Changelog
 
-All notable changes to this project will be documented in this file.
-
 ## [Unreleased]
 
-- Placeholder for upcoming changes.
+## [0.1.0]
 
-## [0.1.0] - 2024-10-12
-
-- Initial release.
+- `figma2css` command: reads a saved Figma file or nodes response (path or stdin) or
+  fetches one live with `FIGMA_TOKEN`, and prints CSS custom properties or JSON.
+- Reads fill styles (solid, linear and radial gradients, alpha), text styles, effect
+  styles (drop and inner shadows, layer and background blur) and layout grid styles.
+- Collects unstyled spacing (auto layout gap and padding, grid gutters), corner radii
+  and fonts as value scales.
+- Reads local variables with modes, aliases and type-based categories.
+- Clear errors and distinct exit codes for a missing or rejected token, unreachable
+  API, bad input files and bad JSON.
